@@ -17,8 +17,12 @@ import org.apache.uima.jcas.cas.FloatArray;
 
 
 /** The system will evaluate the answers by using this annotation
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+It will sorted the output answer according to their score and calculate the precision score at N
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class Evaluation extends Base {
   /** @generated
@@ -70,13 +74,15 @@ public class Evaluation extends Base {
   //* Feature: precision
 
   /** getter for precision - gets Calculate precision at N( where N is the total number of correct answers)
+ * @since 1.0
    * @generated */
   public double getPrecision() {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precision == null)
       jcasType.jcas.throwFeatMissing("precision", "QAAnnotation.Evaluation");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Evaluation_Type)jcasType).casFeatCode_precision);}
     
-  /** setter for precision - sets Calculate precision at N( where N is the total number of correct answers) 
+  /** setter for precision - sets Calculate precision at N( where N is the total number of correct answers)
+ * @since 1.0 
    * @generated */
   public void setPrecision(double v) {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precision == null)
@@ -88,13 +94,15 @@ public class Evaluation extends Base {
   //* Feature: sorted_answer
 
   /** getter for sorted_answer - gets The system will sort the answers according to their scores
+ * @since 1.0
    * @generated */
   public FSArray getSorted_answer() {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_sorted_answer == null)
       jcasType.jcas.throwFeatMissing("sorted_answer", "QAAnnotation.Evaluation");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_sorted_answer)));}
     
-  /** setter for sorted_answer - sets The system will sort the answers according to their scores 
+  /** setter for sorted_answer - sets The system will sort the answers according to their scores
+ * @since 1.0 
    * @generated */
   public void setSorted_answer(FSArray v) {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_sorted_answer == null)

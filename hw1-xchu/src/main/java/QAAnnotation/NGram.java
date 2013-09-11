@@ -15,8 +15,11 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** The system will annotate N-grams of consecutive tokens
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class NGram extends Base {
   /** @generated
@@ -70,13 +73,17 @@ public class NGram extends Base {
   //* Feature: elements
 
   /** getter for elements - gets The elements of N-grams
+ * @see FSArray
+ * @since 1.0
    * @generated */
   public FSArray getElements() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
       jcasType.jcas.throwFeatMissing("elements", "QAAnnotation.NGram");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements)));}
     
-  /** setter for elements - sets The elements of N-grams 
+  /** setter for elements - sets The elements of N-grams
+ * @see FSArray
+ * @since 1.0 
    * @generated */
   public void setElements(FSArray v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
@@ -102,13 +109,15 @@ public class NGram extends Base {
   //* Feature: elementType
 
   /** getter for elementType - gets The annotation will output the element type
+* @since 1.0
    * @generated */
   public String getElementType() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)
       jcasType.jcas.throwFeatMissing("elementType", "QAAnnotation.NGram");
     return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_elementType);}
     
-  /** setter for elementType - sets The annotation will output the element type 
+  /** setter for elementType - sets The annotation will output the element type
+* @since 1.0 
    * @generated */
   public void setElementType(String v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)

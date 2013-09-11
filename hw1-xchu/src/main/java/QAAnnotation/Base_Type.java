@@ -15,7 +15,10 @@ import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** A base annotation type. 
 All other types inherit from this base annotation type.
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
  * @generated */
 public class Base_Type extends Annotation_Type {
   /** @generated */

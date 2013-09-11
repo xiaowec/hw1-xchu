@@ -10,8 +10,11 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** The answer score annotation will record the score assigned to the answer
- * Updated by JCasGen Tue Sep 10 21:24:26 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class AnswerScore extends Base {
   /** @generated
@@ -65,13 +68,15 @@ public class AnswerScore extends Base {
   //* Feature: score
 
   /** getter for score - gets The score of each answer
+ * @since 1.0
    * @generated */
   public double getScore() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "QAAnnotation.AnswerScore");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score);}
     
-  /** setter for score - sets The score of each answer 
+  /** setter for score - sets The score of each answer
+ * @since 1.0 
    * @generated */
   public void setScore(double v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)

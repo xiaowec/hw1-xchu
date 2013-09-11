@@ -10,8 +10,11 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** The system will annotate each token span in each question and answer
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class Token extends Base {
   /** @generated

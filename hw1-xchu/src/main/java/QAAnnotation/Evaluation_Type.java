@@ -14,7 +14,11 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** The system will evaluate the answers by using this annotation
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
+It will sorted the output answer according to their score and calculate the precision score at N
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
  * @generated */
 public class Evaluation_Type extends Base_Type {
   /** @generated */

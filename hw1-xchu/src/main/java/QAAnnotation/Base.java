@@ -12,8 +12,11 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 /** A base annotation type. 
 All other types inherit from this base annotation type.
- * Updated by JCasGen Tue Sep 10 21:24:27 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class Base extends Annotation {
   /** @generated
@@ -94,13 +97,18 @@ public class Base extends Annotation {
   //* Feature: confidence
 
   /** getter for confidence - gets the confidence of annotation
+   * @see #getConfidence()
+   * @since 1.0
    * @generated */
   public double getConfidence() {
     if (Base_Type.featOkTst && ((Base_Type)jcasType).casFeat_confidence == null)
       jcasType.jcas.throwFeatMissing("confidence", "QAAnnotation.Base");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Base_Type)jcasType).casFeatCode_confidence);}
     
-  /** setter for confidence - sets the confidence of annotation 
+  /** setter for confidence - sets the confidence of annotation
+   * @param v the value of confidence of each annotation
+   * @see #setDoubleValue(double v)
+   * @since 1.0 
    * @generated */
   public void setConfidence(double v) {
     if (Base_Type.featOkTst && ((Base_Type)jcasType).casFeat_confidence == null)

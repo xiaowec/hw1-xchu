@@ -11,8 +11,11 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 /** Answer annotation. The system will read input file and annotate the answer.
 This class will record whether or not the answer is correct
- * Updated by JCasGen Tue Sep 10 21:24:26 EDT 2013
- * XML source: /media/DISK1_VOL4/CMU/11791/hw1-xchu/src/main/resources/hw1-xchu-aeDescriptor.xml
+ * @author cxw
+ * @version %I%, %G%
+ * @since 1.0
+ * Updated by JCasGen Wed Sep 11 01:47:52 EDT 2013
+ * XML source: /home/cxw/git/hw1-xchu/hw1-xchu/src/main/resources/hw1-xchu-typesystem.xml
  * @generated */
 public class Answer extends Base {
   /** @generated
@@ -66,13 +69,15 @@ public class Answer extends Base {
   //* Feature: isCorrect
 
   /** getter for isCorrect - gets Answer annotation will record whether or not the answer is correct
+ * @since 1.0
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
       jcasType.jcas.throwFeatMissing("isCorrect", "QAAnnotation.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect);}
     
-  /** setter for isCorrect - sets Answer annotation will record whether or not the answer is correct 
+  /** setter for isCorrect - sets Answer annotation will record whether or not the answer is correct
+ * @since 1.0 
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
