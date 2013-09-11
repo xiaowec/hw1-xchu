@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>hw1-xchu-typesystem</name>
+    <description>Defines type systems for QA system.</description>
+    <version>1.0</version>
+    <vendor>Xiaowen Chu-xchu</vendor>
+  <types>
+    <typeDescription>
+      <name>QAAnnotation.Base</name>
+      <description>A base annotation type. 
+All other types inherit from this base annotation type.</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>source</name>
+          <description>To keep track of where an annotation was originally made by</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description>the confidence of annotation</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.Question</name>
+      <description>Question annotation. The system will read input file and annotate the question</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.Answer</name>
+      <description>Answer annotation. The system will read input file and annotate the answer.
+This class will record whether or not the answer is correct</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description>Answer annotation will record whether or not the answer is correct</description>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.Token</name>
+      <description>The system will annotate each token span in each question and answer</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.NGram</name>
+      <description>The system will annotate N-grams of consecutive tokens</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>elementType</name>
+          <description>The annotation will output the element type</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>elements</name>
+          <description>The elements of N-grams</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.AnswerScore</name>
+      <description>The answer score annotation will record the score assigned to the answer</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>score</name>
+          <description>The score of each answer</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>QAAnnotation.Evaluation</name>
+      <description>The system will evaluate the answers by using this annotation</description>
+      <supertypeName>QAAnnotation.Base</supertypeName>
+      <features>
+        <featureDescription>
+          <name>precision</name>
+          <description>Calculate precision at N( where N is the total number of correct answers)</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>sorted_answer</name>
+          <description>The system will sort the answers according to their scores</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
